@@ -34,7 +34,7 @@ class SocialLoginController extends Controller
     public function __construct(UserRepository $userRepository, SocialiteHelper $socialiteHelper)
     {
         $this->userRepository = $userRepository;
-        $this->socialiteHelper = $socialiteHelper;
+        $this->sociapermissionliteHelper = $socialiteHelper;
     }
 
     /**

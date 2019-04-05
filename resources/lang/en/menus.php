@@ -23,6 +23,13 @@ return [
                 'management' => 'Role Management',
                 'main' => 'Roles',
             ],
+            'permissions' => [
+                'all' => 'All Permissions',
+                'create' => 'Create Permission',
+                'edit' => 'Edit Permission',
+                'management' => 'Permission Management',
+                'main' => 'Permissions',
+            ],
 
             'users' => [
                 'all' => 'All Users',

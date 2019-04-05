@@ -24,6 +24,17 @@ return [
                 'not_found' => 'That role does not exist.',
                 'update_error' => 'There was a problem updating this role. Please try again.',
             ],
+            'permissions' => [
+                'already_exists' => 'That Permissions already exists. Please choose a different name.',
+                'cant_delete_admin' => 'You can not delete the Administrator permission.',
+                'cant_delete_permission' => 'You cannot delete this permission.it has been already in use',
+                'create_error' => 'There was a problem creating this permission. Please try again.',
+                'delete_error' => 'There was a problem deleting this permission. Please try again.',
+                'has_users' => 'You can not delete a permission with associated users.',
+                'needs_permission' => 'You must select at least one permission for this permission.',
+                'not_found' => 'That permission does not exist.',
+                'update_error' => 'There was a problem updating this permission. Please try again.',
+            ],
 
             'users' => [
                 'already_confirmed' => 'This user is already confirmed.',

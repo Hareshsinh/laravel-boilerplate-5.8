@@ -13,4 +13,17 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function countRelationships($model, $relationships)
+    {
+        $counter = array();
+
+        foreach ($relationships as $relationship => $text) {
+            if ($c = $model->$relationship()->count()) {
+                $counter[] = $c . ' ' . strtolower($text);
+            }
+        }
+
+        return $counter;
+    }
 }

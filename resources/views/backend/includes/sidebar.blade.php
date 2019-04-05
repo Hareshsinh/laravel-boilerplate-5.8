@@ -51,6 +51,13 @@
                                 @lang('labels.backend.access.roles.management')
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link
+{{--{{ active_class(Active::checkUriPattern('admin/auth/permission*')) }}--}}
+                                    " href="{{ route('admin.auth.permission.index') }}">
+                                @lang('labels.backend.access.permissions.management')
+                            </a>
+                        </li>
                     </ul>
                 </li>
             @endif

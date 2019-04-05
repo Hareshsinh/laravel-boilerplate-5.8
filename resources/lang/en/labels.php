@@ -50,6 +50,18 @@ return [
                     'total' => 'role total|roles total',
                 ],
             ],
+            'permissions' => [
+                'create' => 'Create Permission',
+                'edit' => 'Edit Permission',
+                'management' => 'Permission Management',
+
+                'table' => [
+                    'number_of_users' => 'Number of Users',
+                    'permissions' => 'Permissions',
+                    'sort' => 'Sort',
+                    'total' => 'permission total|permissions total',
+                ],
+            ],
 
             'users' => [
                 'active' => 'Active Users',
