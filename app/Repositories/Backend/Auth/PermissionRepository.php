@@ -2,6 +2,7 @@
 
 namespace App\Repositories\Backend\Auth;
 
+use App\Events\Backend\Auth\Permission\PermissionUpdated;
 use App\Repositories\BaseRepository;
 use DB;
 use Spatie\Permission\Models\Permission;
@@ -47,15 +48,14 @@ class PermissionRepository extends BaseRepository
         });
     }
 
+
     /**
-     * @param Role  $role
+     * @param Role $permission
      * @param array $data
-     *
-     * @throws GeneralException
-     * @throws \Throwable
      * @return mixed
+     * @throws \Throwable
      */
-    public function update(Role $permission, array $data)
+    public function update($permission, array $data)
     {
         if ($permission->isAdmin()) {
             throw new GeneralException('You can not edit the administrator role.');
@@ -78,9 +78,8 @@ class PermissionRepository extends BaseRepository
             if ($permission->update([
                 'name' => strtolower($data['name']),
             ])) {
-                $permission->syncPermissions($data['permissions']);
 
-                event(new RoleUpdated($permission));
+                event(new PermissionUpdated($permission));
 
                 return $permission;
             }
